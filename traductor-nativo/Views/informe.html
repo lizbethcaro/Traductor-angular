@@ -1,0 +1,41 @@
+
+<style>
+    .T1{
+        background-color: bisque;
+        text-align: center;
+        margin: 1em 0;
+    }
+    .T2{
+        background-color: burlywood;
+
+    }
+    .T3{
+        margin-top: 1em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 0.5em;
+    }
+    .P1{
+        margin: 0.5em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .L1{
+        margin-left: 1em;
+    }
+    .L1::before{
+        content: "*";
+    }
+</style>
+
+    <div class="card" ng-controller="controlador">
+
+        <input type="text" id="texto-cargar" ng-model="texto" ng-change="cargar_datos()"> <hr>
+        <!-- <input type="text" ng-model="inicio">
+        <input type="text" ng-model="final"> -->
+        <!-- <a href="#" ng-click="cargar_datos()">Click</a> -->
+
+        <div ng-repeat="fila in informacion" ng-class=" fila.tipo = 'T1' ? 'fs-1': '' ">
+                {{fila.texto}}
+        </div>
+
+    </div>
+    
