@@ -40,6 +40,15 @@ CREATE TABLE usuarios
     contrasena text not null
 );
 
+
+DROP TABLE IF EXISTS tb_informe;
+CREATE TABLE tb_informe (
+  id int(11) NOT NULL,
+  tipo char(2) NOT NULL,
+  dependencia varchar(20) NOT NULL,
+  texto text NOT NULL
+);
+
 DROP VIEW IF EXISTS vista_idiomas;
 CREATE VIEW vista_idiomas  AS SELECT count(0) AS conteo, t1.idioma AS idioma FROM idiomas AS t1 WHERE t1.id <> 0 GROUP BY t1.idioma ;
 

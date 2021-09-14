@@ -427,3 +427,26 @@ INSERT INTO tipos (id, tipo, descripcion) VALUES
 INSERT INTO usuarios (id, usuario, contrasena) VALUES
 (1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055');
 
+--
+
+INSERT INTO tb_informe (id, tipo, texto) VALUES
+(1, 'T1', 'PUESTA EN MARCHA'),
+(2, 'T2', 'REQUERIMIENTOS DEL HARDWARE Y SOFTWARE '),
+(3, 'P1', 'Para la utilización del Traductor se debe tener en cuenta lo siguiente: '),
+(4, 'T3', 'REQUISITOS DE HARDWARE: '),
+(5, 'L1', 'Sistema operativo Windows 7 o posterior, MacOS. '),
+(6, 'L1', 'Espacio libre en el Disco de 500 MB'),
+(7, 'T3', 'REQUISITOS DE SOFTWARE: '),
+(8, 'L1', 'Sistema operativo Windows 7 o posterior, MacOS. '),
+(9, 'L1', 'Navegadores Chrome, Firefox, Microsoft Edge'),
+(10, 'L1', 'Lector de archivos PDF, como Acrobat Reader u otro similar'),
+(11, 'L1', 'Conexión a internet'),
+(12, 'L1', 'Los lenguajes de programación: PHP, HTML, JAVASCRIPT'),
+(13, 'L1', 'Servidor de datos: Mysql 5.7+ - MariaDB 10.4+'),
+(14, 'L1', ' Apache 2.4.35 VC15'),
+(15, 'L1', 'PHP 7.2+'),
+(16, 'T1', 'INSTALACIÓN'),
+(17, 'P1', 'Si usted sigue los siguientes pasos a continuación, podrá realizar la instalación del Traductor sin ningún problema.'),
+(18, 'P1', 'Al ingresar con el siguiente enlace que a continuación podrá visualizar; este lo dirige a la siguiente pantalla.');
+
+
