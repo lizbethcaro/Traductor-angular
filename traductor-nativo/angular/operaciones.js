@@ -29,15 +29,25 @@ app.controller( "controlador",
                         // Titulos
                         let tm = [];
                         filtro1.forEach(item => {
-                            tm = $scope.documento.filter(x=>x.dependencia.startsWith(item.dependencia));
+
+                            tm = tm.concat($scope.documento.filter(x=>x.dependencia.startsWith(item.dependencia)));
+                            
                         });
                         
                         //let dp = $scope.documento.filter(x=>x.dependencia.startsWith())
-                        $scope.informacion = tm;    
+                        //console.log(tm);
+                        filtro1 = tm;    
 
 
                     }else{
-                        filtro1 = $scope.documento.filter(x=>x.texto.includes(tx) && x.tipo == 'T2');
+                        filtro1 = $scope.documento.filter(x=>x.texto.toLowerCase().includes(tx) && x.tipo == 'T2');
+                        let tm = [];
+                        filtro1.forEach(item => {
+
+                            tm = tm.concat($scope.documento.filter(x=>x.dependencia.startsWith(item.dependencia)));
+                            
+                        });
+                        filtro1 = tm;
                     }
     
                     $scope.informacion = filtro1;
@@ -61,9 +71,6 @@ app.controller( "controlador",
                        // console.log('datos.php?mivalor=' + $scope.mitexto + "&in=1&fn=10");
                         $scope.informacion = response.data;
                         $scope.documento = response.data;
-                        console.log(response.data);
-
-                        console.log( $scope.documento )
                         //console.log( $scope.informacion);
                     }   
                 );//--------fin datos---    
